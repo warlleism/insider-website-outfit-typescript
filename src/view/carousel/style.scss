@@ -37,15 +37,14 @@
     .carousel {
         cursor: grab;
         overflow: hidden;
-
         .inner {
             display: flex;
 
             .item {
                 padding: 14px;
                 display: flex;
-                min-width: 380px;
-                min-height: 400px;
+                min-width: 320px;
+                min-height: 380px;
                 margin-left: 30px;
                 position: relative;
                 align-items: center;

@@ -13,7 +13,7 @@ const Carousel = () => {
         if (carousel.current) {
             setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
         }
-    }, [typeSkins])
+    }, [])
 
     function handlerImage(event: React.MouseEvent<HTMLElement>, type: boolean) {
         if (type) {
@@ -74,7 +74,7 @@ const Carousel = () => {
                                     >
                                         <img src={itens.img.img_1} alt="" />
                                         <img src={itens.img.img_2} alt="" />
-                                        <div>{itens.name}</div>
+                                        <div style={{ fontWeight: 600, letterSpacing: 3, textTransform: 'uppercase' }}>{itens.name}</div>
                                     </motion.div>
 
                                 )
