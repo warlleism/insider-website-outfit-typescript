@@ -1,4 +1,4 @@
-import Carousel from "../view/carousel";
+import Carousel from "../view/clothes_carousel";
 import Header from "../view/header";
 import Poster from "../view/poster";
 

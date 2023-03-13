@@ -3,7 +3,6 @@
     display: flex;
     overflow: hidden;
     min-height: 340px;
-    margin-bottom: 100px;
     flex-direction: column;
 
     .carousel {
@@ -22,10 +21,6 @@
                 align-items: center;
                 flex-direction: column;
                 justify-content: space-between;
-
-                img:nth-child(2) {
-                    opacity: 0;
-                }
 
                 img {
                     top: 0;

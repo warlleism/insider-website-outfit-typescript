@@ -2,7 +2,6 @@ import './style.scss'
 import { Intagram_content } from "../../data/instagram_data";
 import Carousel_component from "../../components/carousel";
 
-
 const Poster = () => {
     return (
         <>
@@ -12,8 +11,8 @@ const Poster = () => {
                     <div>SHOP</div>
                 </div>
             </div>
-            <div>
-                <div style={{ fontWeight: 300, fontSize: '2rem', textAlign: 'center', margin: "50px 0px" }}>DIRETO DO <strong style={{ fontWeight: 400 }}>INSTAGRAM</strong></div>
+            <div className='container-instagram'>
+                <div className='titulo-instagram' style={{ fontWeight: 300, fontSize: '2rem', textAlign: 'center' }}>DIRETO DO <strong style={{ fontWeight: 400 }}>INSTAGRAM</strong></div>
                 <Carousel_component data={Intagram_content} />
             </div>
         </>

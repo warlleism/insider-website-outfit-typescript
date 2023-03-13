@@ -15,6 +15,30 @@ const Carousel = () => {
         }
     }, [])
 
+    function handlerOpacity(value: boolean) {
+        const itens = document?.querySelectorAll<HTMLElement>('#item')
+
+        if (typeSkins == true && value == true) {
+            return
+        } else if (typeSkins == false && value == false) {
+            return
+        } else {
+            for (let i = 0; i < itens.length; i++) {
+                itens[i].style.opacity = '0'
+            }
+            setTimeout(() => {
+                for (let i = 0; i < itens.length; i++) {
+                    setTypeSkins(value)
+                    itens[i].style.opacity = '1'
+                }
+            }, 1000)
+        }
+    }
+
+    useEffect(() => {
+
+    }, [typeSkins])
+
     function handlerImage(event: React.MouseEvent<HTMLElement>, type: boolean) {
         if (type) {
             const image = event.target as HTMLElement;
@@ -34,9 +58,9 @@ const Carousel = () => {
     return (
         <div className='container-carousel'>
             <div className='container-change-skin-gener'>
-                <div onClick={() => setTypeSkins(true)} style={{ color: typeSkins ? "#1f1f1faf" : "black" }}>HOMEM</div>
+                <div onClick={() => handlerOpacity(true)} style={{ color: typeSkins ? "#1f1f1faf" : "black" }}>HOMEM</div>
                 <div>|</div>
-                <div onClick={() => setTypeSkins(false)} style={{ color: typeSkins ? "black" : "#1f1f1faf" }}>MULHER</div>
+                <div onClick={() => handlerOpacity(false)} style={{ color: typeSkins ? "black" : "#1f1f1faf" }}>MULHER</div>
             </div>
             <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
                 <motion.div className='inner'
