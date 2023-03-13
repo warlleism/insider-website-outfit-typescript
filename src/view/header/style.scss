@@ -34,23 +34,7 @@
           align-items: center;
           letter-spacing: 10px;
           justify-content: center;
-          animation: text 10s infinite;
       }
-
-      @keyframes text {
-          0% {
-              font-size: 15rem;
-          }
-
-          50% {
-              font-size: 16rem;
-          }
-
-          100% {
-              font-size: 15rem;
-          }
-      }
-
 
       .container-icons {
           right: 2%;
