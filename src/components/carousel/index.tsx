@@ -25,6 +25,7 @@ const Carousel_component = (props: any) => {
                         props.data?.map((itens: any) => {
                             return (
                                 <motion.div
+                                    key={itens.id}
                                     className='item'
                                     id='item'
                                 >

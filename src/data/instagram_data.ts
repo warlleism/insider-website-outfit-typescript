@@ -20,28 +20,29 @@ import Img_19 from "../images/instagram/img19.jpg"
 import Img_20 from "../images/instagram/img20.jpg"
 
 interface Itens {
+    id: number;
     img: string;
 }
 
 export const Intagram_content: Itens[] = [
-    { img: Img_1 },
-    { img: Img_2 },
-    { img: Img_3 },
-    { img: Img_4 },
-    { img: Img_5 },
-    { img: Img_6 },
-    { img: Img_7 },
-    { img: Img_8 },
-    { img: Img_9 },
-    { img: Img_10 },
-    { img: Img_11 },
-    { img: Img_12 },
-    { img: Img_13 },
-    { img: Img_14 },
-    { img: Img_15 },
-    { img: Img_16 },
-    { img: Img_17 },
-    { img: Img_18 },
-    { img: Img_19 },
-    { img: Img_20 }
+    { id: 1, img: Img_1 },
+    { id: 2, img: Img_2 },
+    { id: 3, img: Img_3 },
+    { id: 4, img: Img_4 },
+    { id: 5, img: Img_5 },
+    { id: 6, img: Img_6 },
+    { id: 7, img: Img_7 },
+    { id: 8, img: Img_8 },
+    { id: 9, img: Img_9 },
+    { id: 10, img: Img_10 },
+    { id: 11, img: Img_11 },
+    { id: 12, img: Img_12 },
+    { id: 13, img: Img_13 },
+    { id: 14, img: Img_14 },
+    { id: 15, img: Img_15 },
+    { id: 16, img: Img_16 },
+    { id: 17, img: Img_17 },
+    { id: 18, img: Img_18 },
+    { id: 19, img: Img_19 },
+    { id: 20, img: Img_20 }
 ]

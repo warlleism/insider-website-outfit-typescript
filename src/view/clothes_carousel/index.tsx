@@ -3,11 +3,25 @@ import { Shirts_Male } from '../../data/data';
 import { Shirts_Female } from '../../data/data';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Carousel = () => {
     const [typeSkins, setTypeSkins] = useState(true);
     const [width, setWidth] = useState(0)
     const carousel = useRef<HTMLInputElement>(null);
+    const navigate = useNavigate()
+    const [grab, setGrab] = useState(true)
+
+    function handleGrabFalse() {
+        setTimeout(() => {
+            setGrab(false)
+        }, 100)
+    }
+    function handleGrabTrue() {
+        setTimeout(() => {
+            setGrab(true)
+        }, 100)
+    }
 
     useEffect(() => {
         if (carousel.current) {
@@ -15,6 +29,15 @@ const Carousel = () => {
         }
     }, [])
 
+    //permanecendo dado no localstorage
+    function setLocalStorage(object: any) {
+        localStorage.setItem('item', JSON.stringify(object))
+        if (grab == true) {
+            navigate('/detalhar')
+        }
+    }
+
+    //script para animação de opacity no carousel
     function handlerOpacity(value: boolean) {
         const itens = document?.querySelectorAll<HTMLElement>('#item')
 
@@ -35,10 +58,7 @@ const Carousel = () => {
         }
     }
 
-    useEffect(() => {
-
-    }, [typeSkins])
-
+    //script de troca de image ao passar mouse em cima do card
     function handlerImage(event: React.MouseEvent<HTMLElement>, type: boolean) {
         if (type) {
             const image = event.target as HTMLElement;
@@ -57,13 +77,21 @@ const Carousel = () => {
 
     return (
         <div className='container-carousel'>
+            {console.log(grab)}
             <div className='container-change-skin-gener'>
                 <div onClick={() => handlerOpacity(true)} style={{ color: typeSkins ? "#1f1f1faf" : "black" }}>HOMEM</div>
                 <div>|</div>
                 <div onClick={() => handlerOpacity(false)} style={{ color: typeSkins ? "black" : "#1f1f1faf" }}>MULHER</div>
             </div>
-            <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
-                <motion.div className='inner'
+            <motion.div
+                ref={carousel}
+                className='carousel'
+                whileTap={{ cursor: "grabbing" }}
+                onMouseDown={handleGrabFalse}
+                onMouseUp={handleGrabTrue}
+            >
+                <motion.div
+                    className='inner'
                     drag="x"
                     animate={{ x: 0 }}
                     initial={{ x: 100 }}
@@ -75,10 +103,12 @@ const Carousel = () => {
                             Shirts_Male?.map((itens) => {
                                 return (
                                     <motion.div
+                                        key={itens.id}
                                         className='item'
                                         id='item'
                                         onMouseEnter={(event) => handlerImage(event, true)}
                                         onMouseLeave={(event) => handlerImage(event, false)}
+                                        onClick={() => setLocalStorage(itens)}
                                     >
                                         <img src={itens.img.img_1} alt="" />
                                         <img src={itens.img.img_2} alt="" />
@@ -91,10 +121,13 @@ const Carousel = () => {
                             Shirts_Female?.map((itens) => {
                                 return (
                                     <motion.div
+                                        draggable="true"
+                                        key={itens.id}
                                         className='item'
                                         id='item'
                                         onMouseEnter={(event) => handlerImage(event, true)}
                                         onMouseLeave={(event) => handlerImage(event, false)}
+                                        onClick={() => setLocalStorage(itens)}
                                     >
                                         <img src={itens.img.img_1} alt="" />
                                         <img src={itens.img.img_2} alt="" />
