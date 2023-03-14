@@ -89,10 +89,10 @@ export const Shirts_Male: Itens[] = [
             img_4: Tech_t_shirt_gola_4,
         },
         img2: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Undershirt_anti_suor_1,
+            img_2: Undershirt_anti_suor_1,
+            img_3: Undershirt_anti_suor_2,
+            img_4: Undershirt_anti_suor_2,
         },
         img3: {
             img_1: Tech_t_shirt_gola_1,

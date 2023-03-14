@@ -4,12 +4,18 @@ import { Itens } from "../../interface/IContent"
 import Carousel_component from '../../components/carousel';
 import { Intagram_content } from "../../data/instagram_data"
 
+interface Imagens {
+    img_1: string;
+    img_2: string;
+    img_3: string;
+    img_4: string;
+}
 
 const DetailProduct = () => {
 
     const [product, setProduct] = useState<Itens>()
 
-    const [type, setType] = useState(1)
+    const [type, setType] = useState<Imagens>()
 
     useEffect(() => {
 
@@ -20,21 +26,50 @@ const DetailProduct = () => {
 
     }, [])
 
+    function handlerType(value: number) {
+
+        if (value == 1) {
+            setType(product?.img1)
+        } else if (value == 2) {
+            setType(product?.img2)
+        }
+        else if (value == 3) {
+            setType(product?.img3)
+
+        } else if (value == 4) {
+            setType(product?.img4)
+        }
+
+    }
+
+
     return (
         <div className='container-detail'>
             <div className='container-content-grid'>
-
                 {
-                    <div className='container-imgs'>
-                        <div>
-                            <img src={product?.img1?.img_1} alt="" />
-                            <img src={product?.img1?.img_2} alt="" />
+                    type
+                        ?
+                        <div className='container-imgs'>
+                            <div>
+                                <img src={type?.img_1} alt="" />
+                                <img src={type?.img_2} alt="" />
+                            </div>
+                            <div>
+                                <img src={type?.img_3} alt="" />
+                                <img src={type?.img_4} alt="" />
+                            </div>
                         </div>
-                        <div>
-                            <img src={product?.img1?.img_3} alt="" />
-                            <img src={product?.img1?.img_4} alt="" />
+                        :
+                        <div className='container-imgs'>
+                            <div>
+                                <img src={product?.img1?.img_1} alt="" />
+                                <img src={product?.img1?.img_2} alt="" />
+                            </div>
+                            <div>
+                                <img src={product?.img1?.img_3} alt="" />
+                                <img src={product?.img1?.img_4} alt="" />
+                            </div>
                         </div>
-                    </div>
                 }
 
                 <div className='container-info'>
@@ -61,7 +96,11 @@ const DetailProduct = () => {
                             {
                                 product?.color?.map((e) => {
                                     return (
-                                        <div key={e?.id_color} style={{ backgroundColor: e?.hex }}></div>
+                                        <div key={e?.id_color} onClick={() => {
+                                            if (typeof e?.id_color !== 'undefined') {
+                                                handlerType(e.id_color);
+                                            }
+                                        }} style={{ backgroundColor: e?.hex }}></div>
                                     )
                                 })
                             }
