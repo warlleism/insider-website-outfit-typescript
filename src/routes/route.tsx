@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const Content = lazy(() => import('../content/index'))
-const DetailProduct = lazy(() => import('./../view/detalhar/index'))
+const DetailProduct = lazy(() => import('../view/detail/index'))
 
 
 

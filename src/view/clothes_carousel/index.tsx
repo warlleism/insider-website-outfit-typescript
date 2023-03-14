@@ -77,7 +77,6 @@ const Carousel = () => {
 
     return (
         <div className='container-carousel'>
-            {console.log(grab)}
             <div className='container-change-skin-gener'>
                 <div onClick={() => handlerOpacity(true)} style={{ color: typeSkins ? "#1f1f1faf" : "black" }}>HOMEM</div>
                 <div>|</div>
@@ -110,8 +109,8 @@ const Carousel = () => {
                                         onMouseLeave={(event) => handlerImage(event, false)}
                                         onClick={() => setLocalStorage(itens)}
                                     >
-                                        <img src={itens.img.img_1} alt="" />
-                                        <img src={itens.img.img_2} alt="" />
+                                        <img src={itens?.img1?.img_1} alt="" />
+                                        <img src={itens?.img1?.img_2} alt="" />
                                         <div style={{ fontWeight: 600, letterSpacing: 3, textTransform: 'uppercase' }}>{itens.name}</div>
                                     </motion.div>
 
@@ -129,8 +128,8 @@ const Carousel = () => {
                                         onMouseLeave={(event) => handlerImage(event, false)}
                                         onClick={() => setLocalStorage(itens)}
                                     >
-                                        <img src={itens.img.img_1} alt="" />
-                                        <img src={itens.img.img_2} alt="" />
+                                        <img src={itens?.img1?.img_1} alt="" />
+                                        <img src={itens?.img1?.img_2} alt="" />
                                         <div style={{ fontWeight: 600, letterSpacing: 3, textTransform: 'uppercase' }}>{itens.name}</div>
                                     </motion.div>
 
