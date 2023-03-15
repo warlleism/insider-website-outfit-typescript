@@ -36,9 +36,33 @@ import Cueca_confort_16 from "../images/male/cueca-confort/img16.png"
 
 import Cueca_performance_1 from "../images/male/cueca-performance/img1.png"
 import Cueca_performance_2 from "../images/male/cueca-performance/img2.png"
+import Cueca_performance_3 from "../images/male/cueca-performance/img3.png"
+import Cueca_performance_4 from "../images/male/cueca-performance/img4.png"
+import Cueca_performance_5 from "../images/male/cueca-performance/img5.png"
+import Cueca_performance_6 from "../images/male/cueca-performance/img6.png"
+import Cueca_performance_7 from "../images/male/cueca-performance/img7.png"
+import Cueca_performance_8 from "../images/male/cueca-performance/img8.png"
+import Cueca_performance_9 from "../images/male/cueca-performance/img9.png"
+import Cueca_performance_10 from "../images/male/cueca-performance/img10.png"
+import Cueca_performance_11 from "../images/male/cueca-performance/img11.png"
+import Cueca_performance_12 from "../images/male/cueca-performance/img12.png"
+import Cueca_performance_13 from "../images/male/cueca-performance/img13.png"
+import Cueca_performance_14 from "../images/male/cueca-performance/img14.png"
+import Cueca_performance_15 from "../images/male/cueca-performance/img15.png"
+import Cueca_performance_16 from "../images/male/cueca-performance/img16.png"
 
 import Undershirt_anti_suor_1 from "../images/male/undershirt-anti-suor/img1.png"
 import Undershirt_anti_suor_2 from "../images/male/undershirt-anti-suor/img2.png"
+import Undershirt_anti_suor_3 from "../images/male/undershirt-anti-suor/img3.png"
+import Undershirt_anti_suor_4 from "../images/male/undershirt-anti-suor/img4.png"
+import Undershirt_anti_suor_5 from "../images/male/undershirt-anti-suor/img5.png"
+import Undershirt_anti_suor_6 from "../images/male/undershirt-anti-suor/img6.png"
+import Undershirt_anti_suor_7 from "../images/male/undershirt-anti-suor/img7.png"
+import Undershirt_anti_suor_8 from "../images/male/undershirt-anti-suor/img8.png"
+import Undershirt_anti_suor_9 from "../images/male/undershirt-anti-suor/img9.png"
+import Undershirt_anti_suor_10 from "../images/male/undershirt-anti-suor/img10.png"
+import Undershirt_anti_suor_11 from "../images/male/undershirt-anti-suor/img11.png"
+import Undershirt_anti_suor_12 from "../images/male/undershirt-anti-suor/img12.png"
 
 import Tech_t_shirt_gola_1 from "../images/male/tech-t-shirt-gola-v/img1.png"
 import Tech_t_shirt_gola_2 from "../images/male/tech-t-shirt-gola-v/img2.png"
@@ -107,9 +131,9 @@ export const Shirts_Male: Itens[] = [
         name: 'Cueca Comfort',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#000' },
+            { id_color: 1, hex: '#000000' },
             { id_color: 2, hex: '#33405b' },
-            { id_color: 3, hex: '#525041' },
+            { id_color: 3, hex: '#5f666e' },
             { id_color: 4, hex: '#a0b2d0' }
         ],
         img1: {
@@ -141,11 +165,35 @@ export const Shirts_Male: Itens[] = [
         id: 3,
         name: 'Cueca Performance',
         price: 130.00,
+        color: [
+            { id_color: 1, hex: '#5f666e' },
+            { id_color: 2, hex: '#000000' },
+            { id_color: 3, hex: '#4a695a' },
+            { id_color: 4, hex: '#33405b' }
+        ],
         img1: {
             img_1: Cueca_performance_1,
             img_2: Cueca_performance_2,
-            img_3: T_shirt_3,
-            img_4: T_shirt_4,
+            img_3: Cueca_performance_3,
+            img_4: Cueca_performance_4,
+        },
+        img2: {
+            img_1: Cueca_performance_5,
+            img_2: Cueca_performance_6,
+            img_3: Cueca_performance_7,
+            img_4: Cueca_performance_8,
+        },
+        img3: {
+            img_1: Cueca_performance_9,
+            img_2: Cueca_performance_10,
+            img_3: Cueca_performance_11,
+            img_4: Cueca_performance_12,
+        },
+        img4: {
+            img_1: Cueca_performance_13,
+            img_2: Cueca_performance_14,
+            img_3: Cueca_performance_15,
+            img_4: Cueca_performance_16,
         }
     },
     {
@@ -187,12 +235,30 @@ export const Shirts_Male: Itens[] = [
         id: 5,
         name: 'Undershirt Anti Suor',
         price: 130.00,
+        color: [
+            { id_color: 1, hex: '#b59478' },
+            { id_color: 2, hex: '#ffffff' },
+            { id_color: 3, hex: '#000000' },
+        ],
         img1: {
             img_1: Undershirt_anti_suor_1,
             img_2: Undershirt_anti_suor_2,
-            img_3: T_shirt_3,
-            img_4: T_shirt_4,
-        }
+            img_3: Undershirt_anti_suor_3,
+            img_4: Undershirt_anti_suor_4,
+        },
+        img2: {
+            img_1: Undershirt_anti_suor_5,
+            img_2: Undershirt_anti_suor_6,
+            img_3: Undershirt_anti_suor_7,
+            img_4: Undershirt_anti_suor_8,
+        },
+        img3: {
+            img_1: Undershirt_anti_suor_9,
+            img_2: Undershirt_anti_suor_10,
+            img_3: Undershirt_anti_suor_11,
+            img_4: Undershirt_anti_suor_12,
+        },
+
     },
     {
         id: 6,

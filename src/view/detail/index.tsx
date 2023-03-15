@@ -25,11 +25,12 @@ const DetailProduct = () => {
             setProduct(JSON.parse(local))
         }
 
+        alterSizeBackground()
     }, [])
 
     function handlerType(value: number) {
 
-        const data = document?.getElementById('container-image')
+        const data = document?.getElementById('container-image') as HTMLElement
         data.style.opacity = '0'
 
         setTimeout(() => {
@@ -49,15 +50,20 @@ const DetailProduct = () => {
         setTimeout(() => {
             data.style.opacity = '1'
         }, 1000)
-
-
-
-
-
     }
 
-
-
+    //Função responsável por alterar o background do botao de size
+    function alterSizeBackground() {
+        const divs = document.querySelectorAll('#tamanho');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].addEventListener('click', function (this: HTMLElement) {
+                for (let j = 0; j < divs.length; j++) {
+                    divs[j].classList.remove('selected');
+                }
+                this.classList.add('selected');
+            });
+        }
+    }
 
     return (
         <>
@@ -128,12 +134,12 @@ const DetailProduct = () => {
                         <div className='container-size'>
                             <span>Tamanho :</span>
                             <div>
-                                <div>PP</div>
-                                <div>P</div>
-                                <div>M</div>
-                                <div>G</div>
-                                <div>GG</div>
-                                <div>XGG</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>PP</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>P</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>M</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>G</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>GG</div>
+                                <div id='tamanho' onClick={() => alterSizeBackground()}>XGG</div>
                             </div>
                         </div>
 

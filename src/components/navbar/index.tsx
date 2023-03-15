@@ -62,8 +62,8 @@ const Navbar = () => {
                 <div className='container-navbar-links'>
                     <div onMouseOver={() => handdlerContent('man', true)}>HOMEM</div>
                     <div onMouseOver={() => handdlerContent('women', true)}>MULHER</div>
-                    <div>ACESSÓRIOS</div>
-                    <div>SEMANA DO CONSUMIDOR</div>
+                    <div onMouseOver={() => handdlerContent('man', false)}>ACESSÓRIOS</div>
+                    <div onMouseOver={() => handdlerContent('man', false)}>SEMANA DO CONSUMIDOR</div>
                 </div>
 
                 <div className='container-icons-navbar'>
