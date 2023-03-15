@@ -1,0 +1,95 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'roboto';
+
+      a {
+          text-decoration: none;
+      }
+  }
+
+  .container-navbar-content {
+      width: 100%;
+      display: flex;
+      height: 100px;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+
+      .container-logo {
+          width: 20%;
+          display: flex;
+          font-size: 2rem;
+          color: rgb(37, 37, 37);
+          font-weight: 900;
+          justify-content: center;
+
+      }
+
+      .container-navbar-links {
+          width: 60%;
+          display: flex;
+          justify-content: space-between;
+
+          div {
+              cursor: pointer;
+          }
+
+      }
+
+      .container-icons-navbar {
+          width: 90%;
+          display: flex;
+          margin-right: 30px;
+          justify-content: flex-end;
+
+          span {
+              font-size: 2rem;
+              margin-left: 10px;
+          }
+      }
+  }
+
+  .container-content-navbar-default {
+      width: 100%;
+      opacity: 0;
+      display: flex;
+      height: 500px;
+      position: absolute;
+      background-color: #f2f2f2;
+      justify-content: space-evenly;
+
+      ul {
+          list-style: none;
+
+          li {
+              cursor: pointer;
+              margin: 10px 0;
+          }
+      }
+
+      .container-images-navbar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+              width: 100%;
+              height: 400px;
+              transition: .2s;
+              border-radius: 5px;
+              object-fit: contain;
+          }
+
+          img:hover {
+              height: 410px;
+          }
+
+          img:nth-child(1) {
+              margin-right: 10px;
+          }
+      }
+  }
