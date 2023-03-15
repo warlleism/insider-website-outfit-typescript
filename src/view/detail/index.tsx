@@ -29,19 +29,34 @@ const DetailProduct = () => {
 
     function handlerType(value: number) {
 
-        if (value == 1) {
-            setType(product?.img1)
-        } else if (value == 2) {
-            setType(product?.img2)
-        }
-        else if (value == 3) {
-            setType(product?.img3)
+        const data = document?.getElementById('container-image')
+        data.style.opacity = '0'
 
-        } else if (value == 4) {
-            setType(product?.img4)
-        }
+        setTimeout(() => {
+            if (value == 1) {
+                setType(product?.img1)
+            } else if (value == 2) {
+                setType(product?.img2)
+            }
+            else if (value == 3) {
+                setType(product?.img3)
+
+            } else if (value == 4) {
+                setType(product?.img4)
+            }
+        }, 1000)
+
+        setTimeout(() => {
+            data.style.opacity = '1'
+        }, 1000)
+
+
+
+
 
     }
+
+
 
 
     return (
@@ -52,7 +67,7 @@ const DetailProduct = () => {
                     {
                         type
                             ?
-                            <div className='container-imgs'>
+                            <div className='container-imgs' id='container-image'>
                                 <div>
                                     <img src={type?.img_1} alt="" />
                                     <img src={type?.img_2} alt="" />
@@ -63,7 +78,7 @@ const DetailProduct = () => {
                                 </div>
                             </div>
                             :
-                            <div className='container-imgs'>
+                            <div className='container-imgs' id='container-image'>
                                 <div>
                                     <img src={product?.img1?.img_1} alt="" />
                                     <img src={product?.img1?.img_2} alt="" />

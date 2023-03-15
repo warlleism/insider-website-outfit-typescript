@@ -13,9 +13,10 @@
         justify-content: center;
 
         .container-imgs {
-            display: flex;
             width: 60%;
+            display: flex;
             flex-wrap: wrap;
+            transition: .5s ease-in-out;
             justify-content: center;
 
             div {

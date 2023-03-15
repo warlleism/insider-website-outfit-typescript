@@ -120,7 +120,6 @@ const Carousel = () => {
                             Shirts_Female?.map((itens) => {
                                 return (
                                     <motion.div
-                                        draggable="true"
                                         key={itens.id}
                                         className='item'
                                         id='item'
