@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './style.scss'
 import { Itens } from "../../interface/IContent"
 import Carousel_component from '../../components/carousel';
 import { Intagram_content } from "../../data/instagram_data"
 import Navbar from '../../components/navbar';
+import { Context } from '../../context/provider';
 
 interface Imagens {
     img_1: string;
@@ -18,15 +19,23 @@ const DetailProduct = () => {
 
     const [type, setType] = useState<Imagens>()
 
-    useEffect(() => {
+    const { object, setObject } = useContext(Context)
 
+    function handlerObject() {
+        const newState = [...object, product];
+        setObject(newState);
+    }
+
+
+    useEffect(() => {
         const local = localStorage.getItem('item')
         if (local) {
             setProduct(JSON.parse(local))
         }
-
         alterSizeBackground()
     }, [])
+
+
 
     function handlerType(value: number) {
 
@@ -67,6 +76,7 @@ const DetailProduct = () => {
 
     return (
         <>
+        {console.log(object.length)}
             <Navbar />
             <div className='container-detail'>
                 <div className='container-content-grid'>
@@ -174,14 +184,15 @@ const DetailProduct = () => {
                             </div>
                         </div>
 
-                        <div className='add-to-card'>ADICIONAR AO CARRINHO</div>
+                        <div className='add-to-card' onClick={() => handlerObject()}
+                        >ADICIONAR AO CARRINHO</div>
 
                     </div>
 
                 </div>
 
                 <Carousel_component data={Intagram_content} />
-            </div>
+            </div >
         </>
     )
 }

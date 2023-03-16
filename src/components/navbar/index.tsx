@@ -4,14 +4,40 @@ import maleImage1 from '../../images/navbar/male-casual1.png';
 import maleImage2 from '../../images/navbar/male-casual2.png';
 import { Link } from 'react-router-dom';
 import './style.scss'
-import { useEffect } from 'react';
+import { useEffect, useContext, useState } from 'react';
+import { Context } from './../../context/provider';
+
+interface ObjAtual {
+    id: number;
+    name: string;
+}
+
+interface ObjFiltrado {
+    [id: number]: ObjAtual;
+}
 
 
 const Navbar = () => {
 
+    const { object } = useContext(Context)
+
+    const [filter, setFilter] = useState<any>([])
+
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    useEffect(() => {
+        const filteredArray = Object.values(object.reduce<ObjFiltrado>((objFiltrado, objAtual) => {
+            if (!objFiltrado[objAtual.id]) {
+                objFiltrado[objAtual.id] = objAtual;
+            }
+            return objFiltrado;
+        }, {}));
+
+        setFilter(filteredArray);
+    }, [filter]);
 
     const handdlerContent = (param: string, type: boolean) => {
 
@@ -67,8 +93,15 @@ const Navbar = () => {
                 </div>
 
                 <div className='container-icons-navbar'>
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined" style={{ position: 'relative' }}>
                         shopping_bag
+                        {filter?.length > 0 ?
+                            <div className='container-number-cart'>
+                                {filter?.length}
+                            </div>
+                            :
+                            false
+                        }
                     </span>
                     <span className="material-symbols-outlined">
                         person

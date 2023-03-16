@@ -43,12 +43,27 @@
       .container-icons-navbar {
           width: 90%;
           display: flex;
-          margin-right: 30px;
+          margin-right: 50px;
           justify-content: flex-end;
 
           span {
               font-size: 2rem;
-              margin-left: 10px;
+              margin-left: 30px;
+
+              .container-number-cart {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 25px;
+                  height: 25px;
+                  font-size: .8rem;
+                  color: #fff;
+                  border-radius: 100%;
+                  background: black;
+                  position: absolute;
+                  top: -15px;
+                  right: -20px;
+              }
           }
       }
   }

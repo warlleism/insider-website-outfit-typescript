@@ -1,12 +1,15 @@
 
 import Main from './content'
+import { Provider } from './context/provider'
 import Rotas from './routes/route'
 
 function App() {
 
   return (
     <div className="App">
-      <Rotas />
+      <Provider>
+        <Rotas />
+      </Provider>
     </div>
   )
 }
