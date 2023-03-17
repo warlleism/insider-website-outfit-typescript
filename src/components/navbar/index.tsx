@@ -19,7 +19,7 @@ interface ObjFiltrado {
 
 const Navbar = () => {
 
-    const { object } = useContext(Context)
+    const { object, setObject } = useContext(Context)
 
     const [filter, setFilter] = useState<any>([])
 
@@ -38,6 +38,30 @@ const Navbar = () => {
 
         setFilter(filteredArray);
     }, [filter]);
+
+    function deleteItemCart(id: number) {
+        const filter: any = object.filter((data: any) => data.id !== id)
+        setObject(filter)
+    }
+
+
+
+    function showCartContent(param: boolean) {
+
+        if (object.length !== 0) {
+
+            const cart = document.getElementById('cart-content') as HTMLElement || null
+            if (param) {
+                cart.style.opacity = '1';
+                cart.style.pointerEvents = 'all';
+
+            } else {
+                cart.style.opacity = '0';
+                cart.style.pointerEvents = 'none';
+            }
+        }
+    }
+
 
     const handdlerContent = (param: string, type: boolean) => {
 
@@ -92,8 +116,22 @@ const Navbar = () => {
                     <div onMouseOver={() => handdlerContent('man', false)}>SEMANA DO CONSUMIDOR</div>
                 </div>
 
+                <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
+                    {object?.map((data: any) => {
+                        return (
+                            <div className='container-cart-content'>
+                                <div>{data?.name}</div>
+                                <img src={data?.img1.img_1} alt="" />
+                                <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
+                                    delete
+                                </span>
+                            </div>
+                        )
+                    })}
+                </div>
+
                 <div className='container-icons-navbar'>
-                    <span className="material-symbols-outlined" style={{ position: 'relative' }}>
+                    <span className="material-symbols-outlined" style={{ position: 'relative' }} onMouseOver={() => showCartContent(true)}>
                         shopping_bag
                         {filter?.length > 0 ?
                             <div className='container-number-cart'>

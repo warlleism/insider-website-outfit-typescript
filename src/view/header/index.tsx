@@ -8,7 +8,6 @@ import { Context } from './../../context/provider';
 
 interface ObjAtual {
     id: number;
-    name: string;
 }
 
 interface ObjFiltrado {
@@ -17,31 +16,40 @@ interface ObjFiltrado {
 
 const Header = () => {
 
-    const { object } = useContext(Context)
+    const { object, setObject } = useContext(Context)
 
-    const [filter, setFilter] = useState<any>([])
 
     useEffect(() => {
-        const filteredArray = Object.values(object.reduce<ObjFiltrado>((objFiltrado, objAtual) => {
+        const filteredArray: any = Object.values(object.reduce<ObjFiltrado>((objFiltrado, objAtual) => {
             if (!objFiltrado[objAtual.id]) {
                 objFiltrado[objAtual.id] = objAtual;
             }
             return objFiltrado;
         }, {}));
 
-        setFilter(filteredArray);
+        setObject(filteredArray);
     }, []);
 
-    function showCartContent(param: boolean) {
-        const cart = document.getElementById('cart-content') as HTMLElement || null
-        if (param) {
-            cart.style.opacity = '1';
-            cart.style.pointerEvents = 'all';
 
-        } else {
-            cart.style.opacity = '0';
-            cart.style.pointerEvents = 'none';
+    function showCartContent(param: boolean) {
+
+        if (object.length !== 0) {
+
+            const cart = document.getElementById('cart-content') as HTMLElement || null
+            if (param) {
+                cart.style.opacity = '1';
+                cart.style.pointerEvents = 'all';
+
+            } else {
+                cart.style.opacity = '0';
+                cart.style.pointerEvents = 'none';
+            }
         }
+    }
+
+    function deleteItemCart(id: number) {
+        const filter: any = object.filter((data: any) => data.id !== id)
+        setObject(filter)
     }
 
     const handdlerContent = (param: string, type: boolean) => {
@@ -91,11 +99,14 @@ const Header = () => {
             <div className='black-card'></div>
             <div className='container-logo'>INSIDER.</div>
             <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
-                {filter?.map((data: any) => {
+                {object?.map((data: any) => {
                     return (
                         <div className='container-cart-content'>
                             <div>{data?.name}</div>
                             <img src={data?.img1.img_1} alt="" />
+                            <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
+                                delete
+                            </span>
                         </div>
                     )
                 })}
@@ -166,9 +177,9 @@ const Header = () => {
             <div className='container-icons'>
                 <span className="material-symbols-outlined" style={{ position: 'relative' }} onMouseOver={() => showCartContent(true)}>
                     shopping_bag
-                    {filter.length > 0 ?
+                    {object.length > 0 ?
                         <h4 className='container-number-cart'>
-                            {filter.length}
+                            {object.length}
                         </h4>
                         :
                         false
