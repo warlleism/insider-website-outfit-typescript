@@ -100,24 +100,28 @@ export const Shirts_Male: Itens[] = [
             { id_color: 4, hex: '#696969' }
         ],
         img1: {
+            color: 'Preta',
             img_1: T_shirt_1,
             img_2: T_shirt_2,
             img_3: T_shirt_3,
             img_4: T_shirt_4,
         },
         img2: {
+            color: 'Preta',
             img_1: T_shirt_6,
             img_2: T_shirt_7,
             img_3: T_shirt_8,
             img_4: T_shirt_9,
         },
         img3: {
+            color: 'Preta',
             img_1: T_shirt_10,
             img_2: T_shirt_11,
             img_3: T_shirt_12,
             img_4: T_shirt_13,
         },
         img4: {
+            color: 'Preta',
             img_1: T_shirt_14,
             img_2: T_shirt_15,
             img_3: T_shirt_16,
@@ -137,24 +141,28 @@ export const Shirts_Male: Itens[] = [
             { id_color: 4, hex: '#a0b2d0' }
         ],
         img1: {
+            color: 'Preta',
             img_1: Cueca_confort_1,
             img_2: Cueca_confort_2,
             img_3: Cueca_confort_3,
             img_4: Cueca_confort_4,
         },
         img2: {
+            color: 'Preta',
             img_1: Cueca_confort_5,
             img_2: Cueca_confort_6,
             img_3: Cueca_confort_7,
             img_4: Cueca_confort_8,
         },
         img3: {
+            color: 'Preta',
             img_1: Cueca_confort_9,
             img_2: Cueca_confort_10,
             img_3: Cueca_confort_11,
             img_4: Cueca_confort_12,
         },
         img4: {
+            color: 'Preta',
             img_1: Cueca_confort_13,
             img_2: Cueca_confort_14,
             img_3: Cueca_confort_15,
@@ -172,24 +180,28 @@ export const Shirts_Male: Itens[] = [
             { id_color: 4, hex: '#33405b' }
         ],
         img1: {
+            color: 'Preta',
             img_1: Cueca_performance_1,
             img_2: Cueca_performance_2,
             img_3: Cueca_performance_3,
             img_4: Cueca_performance_4,
         },
         img2: {
+            color: 'Preta',
             img_1: Cueca_performance_5,
             img_2: Cueca_performance_6,
             img_3: Cueca_performance_7,
             img_4: Cueca_performance_8,
         },
         img3: {
+            color: 'Preta',
             img_1: Cueca_performance_9,
             img_2: Cueca_performance_10,
             img_3: Cueca_performance_11,
             img_4: Cueca_performance_12,
         },
         img4: {
+            color: 'Preta',
             img_1: Cueca_performance_13,
             img_2: Cueca_performance_14,
             img_3: Cueca_performance_15,
@@ -207,24 +219,28 @@ export const Shirts_Male: Itens[] = [
             { id_color: 4, hex: '#525041' }
         ],
         img1: {
+            color: 'Preta',
             img_1: Tech_t_shirt_gola_1,
             img_2: Tech_t_shirt_gola_2,
             img_3: Tech_t_shirt_gola_3,
             img_4: Tech_t_shirt_gola_4,
         },
         img2: {
+            color: 'Preta',
             img_1: Undershirt_anti_suor_1,
             img_2: Undershirt_anti_suor_1,
             img_3: Undershirt_anti_suor_2,
             img_4: Undershirt_anti_suor_2,
         },
         img3: {
+            color: 'Preta',
             img_1: Tech_t_shirt_gola_1,
             img_2: Tech_t_shirt_gola_2,
             img_3: Tech_t_shirt_gola_3,
             img_4: Tech_t_shirt_gola_4,
         },
         img4: {
+            color: 'Preta',
             img_1: Tech_t_shirt_gola_1,
             img_2: Tech_t_shirt_gola_2,
             img_3: Tech_t_shirt_gola_3,
@@ -241,18 +257,21 @@ export const Shirts_Male: Itens[] = [
             { id_color: 3, hex: '#000000' },
         ],
         img1: {
+            color: 'Preta',
             img_1: Undershirt_anti_suor_1,
             img_2: Undershirt_anti_suor_2,
             img_3: Undershirt_anti_suor_3,
             img_4: Undershirt_anti_suor_4,
         },
         img2: {
+            color: 'Preta',
             img_1: Undershirt_anti_suor_5,
             img_2: Undershirt_anti_suor_6,
             img_3: Undershirt_anti_suor_7,
             img_4: Undershirt_anti_suor_8,
         },
         img3: {
+            color: 'Preta',
             img_1: Undershirt_anti_suor_9,
             img_2: Undershirt_anti_suor_10,
             img_3: Undershirt_anti_suor_11,
@@ -265,6 +284,7 @@ export const Shirts_Male: Itens[] = [
         name: 'Everyday Shorts',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Everyday_shorts_1,
             img_2: Everyday_shorts_2,
             img_3: T_shirt_3,
@@ -276,6 +296,7 @@ export const Shirts_Male: Itens[] = [
         name: 'Daily T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Daily_t_shirt_1,
             img_2: Daily_t_shirt_2,
             img_3: Daily_t_shirt_3,
@@ -287,6 +308,7 @@ export const Shirts_Male: Itens[] = [
         name: 'Performance T-Shirt 2.0',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Performance_t_shirt_2_1,
             img_2: Performance_t_shirt_2_2,
             img_3: Performance_t_shirt_2_3,
@@ -301,6 +323,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,
@@ -312,6 +335,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,
@@ -323,6 +347,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,
@@ -334,6 +359,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,
@@ -345,6 +371,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,
@@ -356,6 +383,7 @@ export const Shirts_Female: Itens[] = [
         name: 'Tech T-Shirt',
         price: 130.00,
         img1: {
+            color: 'Preta',
             img_1: Tshirt_female_1,
             img_2: Tshirt_female_2,
             img_3: Tshirt_female_3,

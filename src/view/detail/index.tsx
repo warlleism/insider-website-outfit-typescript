@@ -13,19 +13,36 @@ interface Imagens {
     img_4: string;
 }
 
+interface ObjAtual {
+    id: number;
+    name: string;
+}
+
+interface ObjFiltrado {
+    [id: number]: ObjAtual;
+}
+
+
 const DetailProduct = () => {
 
-    const [product, setProduct] = useState<Itens>()
-
     const [type, setType] = useState<Imagens>()
-
+    const [product, setProduct] = useState<Itens>()
     const { object, setObject } = useContext(Context)
 
     function handlerObject() {
-        const newState = [...object, product];
-        setObject(newState);
-    }
+        const data = object.map((e) => e.id)
+        const obj = product?.id
 
+        if (obj !== undefined) {
+            const filter: boolean = data.includes(obj)
+            if (filter) {
+                return
+            } else {
+                const newState: any = [...object, product];
+                setObject(newState);
+            }
+        }
+    }
 
     useEffect(() => {
         const local = localStorage.getItem('item')
@@ -34,6 +51,8 @@ const DetailProduct = () => {
         }
         alterSizeBackground()
     }, [])
+
+
 
 
 
@@ -76,7 +95,6 @@ const DetailProduct = () => {
 
     return (
         <>
-        {console.log(object.length)}
             <Navbar />
             <div className='container-detail'>
                 <div className='container-content-grid'>

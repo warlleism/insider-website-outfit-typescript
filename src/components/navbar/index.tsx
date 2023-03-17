@@ -3,53 +3,34 @@ import femaleImage2 from '../../images/navbar/female-casual2.png';
 import maleImage1 from '../../images/navbar/male-casual1.png';
 import maleImage2 from '../../images/navbar/male-casual2.png';
 import { Link } from 'react-router-dom';
-import './style.scss'
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { Context } from './../../context/provider';
-
-interface ObjAtual {
-    id: number;
-    name: string;
-}
-
-interface ObjFiltrado {
-    [id: number]: ObjAtual;
-}
-
+import './style.scss'
 
 const Navbar = () => {
 
     const { object, setObject } = useContext(Context)
-
-    const [filter, setFilter] = useState<any>([])
 
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
 
-    useEffect(() => {
-        const filteredArray = Object.values(object.reduce<ObjFiltrado>((objFiltrado, objAtual) => {
-            if (!objFiltrado[objAtual.id]) {
-                objFiltrado[objAtual.id] = objAtual;
-            }
-            return objFiltrado;
-        }, {}));
-
-        setFilter(filteredArray);
-    }, [filter]);
 
     function deleteItemCart(id: number) {
         const filter: any = object.filter((data: any) => data.id !== id)
         setObject(filter)
     }
 
-
+    //permanecendo dado no localstorage e rotaciona pra tela de detalhar
+    function setLocalStorage(object: any) {
+        localStorage.setItem('item', JSON.stringify(object))
+        location.reload()
+    }
 
     function showCartContent(param: boolean) {
 
         if (object.length !== 0) {
-
             const cart = document.getElementById('cart-content') as HTMLElement || null
             if (param) {
                 cart.style.opacity = '1';
@@ -116,26 +97,36 @@ const Navbar = () => {
                     <div onMouseOver={() => handdlerContent('man', false)}>SEMANA DO CONSUMIDOR</div>
                 </div>
 
-                <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
-                    {object?.map((data: any) => {
-                        return (
-                            <div className='container-cart-content'>
-                                <div>{data?.name}</div>
-                                <img src={data?.img1.img_1} alt="" />
-                                <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
-                                    delete
-                                </span>
-                            </div>
-                        )
-                    })}
-                </div>
+                {
+                    object.length !== 0
+                        ?
+                        <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
+                            {object?.map((data: any) => {
+                                return (
+                                    <div className='container-cart-content'>
+                                        <div className='container-info-cart' onClick={() => setLocalStorage(data)}>
+                                            <div>{data?.name}</div>
+                                            <div>{data?.img1.color}</div>
+                                        </div>
+                                        <img src={data?.img1.img_1} alt="" />
+                                        <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
+                                            close
+                                        </span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+
+                        :
+                        false
+                }
 
                 <div className='container-icons-navbar'>
                     <span className="material-symbols-outlined" style={{ position: 'relative' }} onMouseOver={() => showCartContent(true)}>
                         shopping_bag
-                        {filter?.length > 0 ?
+                        {object?.length > 0 ?
                             <div className='container-number-cart'>
-                                {filter?.length}
+                                {object?.length}
                             </div>
                             :
                             false

@@ -55,14 +55,24 @@
               justify-content: space-between;
               border-left: solid #555555 5px;
 
-              div {
+              .container-info-cart {
                   width: 150px;
+                  height: 100%;
+                  display: flex;
+                  cursor: pointer;
+                  flex-direction: column;
+
+                  div:nth-child(2) {
+                      font-size: .8rem;
+                      color: #535353;
+                      margin-top: 5px;
+                  }
               }
 
               img {
                   width: 60px;
                   height: 60px;
-                  border-radius: 100%;
+                  border-radius: 5%;
               }
           }
       }

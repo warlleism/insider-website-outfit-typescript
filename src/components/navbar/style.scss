@@ -22,8 +22,8 @@
 
       .container-cart-detail {
           top: 70px;
-          z-index: 5;
           opacity: 0;
+          z-index: 5;
           width: 300px;
           right: 100px;
           height: 300px;
@@ -37,6 +37,7 @@
           background-color: rgb(31, 31, 31);
           box-shadow: rgba(0, 0, 0, 0.603) 3px 5px 5px;
 
+
           .container-cart-content {
               width: 100%;
               display: flex;
@@ -48,14 +49,24 @@
               justify-content: space-between;
               border-left: solid #555555 5px;
 
-              div {
+              .container-info-cart {
                   width: 150px;
+                  height: 100%;
+                  display: flex;
+                  cursor: pointer;
+                  flex-direction: column;
+
+                  div:nth-child(2) {
+                      font-size: .8rem;
+                      color: #535353;
+                      margin-top: 5px;
+                  }
               }
 
               img {
                   width: 60px;
                   height: 60px;
-                  border-radius: 100%;
+                  border-radius: 5%;
               }
           }
       }

@@ -29,7 +29,7 @@ const Carousel = () => {
         }
     }, [])
 
-    //permanecendo dado no localstorage
+    //permanecendo dado no localstorage e rotaciona pra tela de detalhar
     function setLocalStorage(object: any) {
         localStorage.setItem('item', JSON.stringify(object))
         if (grab == true) {
