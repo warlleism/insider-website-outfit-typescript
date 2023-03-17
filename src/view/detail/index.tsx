@@ -7,21 +7,11 @@ import Navbar from '../../components/navbar';
 import { Context } from '../../context/provider';
 
 interface Imagens {
-    img_1: string;
-    img_2: string;
-    img_3: string;
-    img_4: string;
+    img_1?: string;
+    img_2?: string;
+    img_3?: string;
+    img_4?: string;
 }
-
-interface ObjAtual {
-    id: number;
-    name: string;
-}
-
-interface ObjFiltrado {
-    [id: number]: ObjAtual;
-}
-
 
 const DetailProduct = () => {
 
@@ -29,10 +19,11 @@ const DetailProduct = () => {
     const [product, setProduct] = useState<Itens>()
     const { object, setObject } = useContext(Context)
 
+    //funcao responsavel por adicionar produto ao carrinho
     function handlerObject() {
+
         const data = object.map((e) => e.id)
         const obj = product?.id
-
         if (obj !== undefined) {
             const filter: boolean = data.includes(obj)
             if (filter) {
@@ -52,15 +43,11 @@ const DetailProduct = () => {
         alterSizeBackground()
     }, [])
 
-
-
-
-
+    //script de anomação ao trocar de cor do produto
     function handlerType(value: number) {
 
         const data = document?.getElementById('container-image') as HTMLElement
         data.style.opacity = '0'
-
         setTimeout(() => {
             if (value == 1) {
                 setType(product?.img1)
@@ -152,6 +139,10 @@ const DetailProduct = () => {
                                                 if (typeof e?.id_color !== 'undefined') {
                                                     handlerType(e.id_color);
                                                 }
+                                                setProduct((product: any) => ({
+                                                    ...product,
+                                                    cor: e?.name
+                                                }));
                                             }} style={{ backgroundColor: e?.hex }}></div>
                                         )
                                     })

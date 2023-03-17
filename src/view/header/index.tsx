@@ -111,7 +111,7 @@ const Header = () => {
                                 <div className='container-cart-content'>
                                     <div className='container-info-cart' onClick={() => setLocalStorage(data)}>
                                         <div>{data?.name}</div>
-                                        <div>{data?.img1.color}</div>
+                                        <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
                                     </div>
                                     <img src={data?.img1.img_1} alt="" />
                                     <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>

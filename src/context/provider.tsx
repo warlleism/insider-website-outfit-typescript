@@ -23,7 +23,6 @@ export const Provider = ({ children }: UserContextProps) => {
 
     const [object, setObject] = useState<Itens[]>(initialValue.object);
 
-
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(object))
     }, [object])

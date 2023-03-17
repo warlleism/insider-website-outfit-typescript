@@ -103,10 +103,10 @@ const Navbar = () => {
                         <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
                             {object?.map((data: any) => {
                                 return (
-                                    <div className='container-cart-content'>
+                                    <div className='container-cart-content' key={data?.id}>
                                         <div className='container-info-cart' onClick={() => setLocalStorage(data)}>
                                             <div>{data?.name}</div>
-                                            <div>{data?.img1.color}</div>
+                                            <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
                                         </div>
                                         <img src={data?.img1.img_1} alt="" />
                                         <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
