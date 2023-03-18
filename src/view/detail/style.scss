@@ -1,8 +1,8 @@
 .selected {
     color: #fff;
     transition: .2s ease-in;
-    background-color: #242424; 
-  }
+    background-color: #242424;
+}
 
 .container-detail {
     width: 100%;
@@ -185,15 +185,95 @@
             }
 
             .add-to-card {
-                color: #fff;
-                padding: 10px;
+                border: none;
+                height: 40px;
+                width: 400px;
+                display: flex;
+                font-size: 1rem;
                 cursor: pointer;
                 margin-top: 30px;
+                overflow: hidden;
+                color: #202020;
                 border-radius: 5px;
                 text-align: center;
-                letter-spacing: 3px;
-                background-color: #000000;
+                position: relative;
+                align-items: center;
+                transition: all 0.7s;
+                background: transparent;
+                justify-content: center;
+                text-transform: uppercase;
+                border: 3px solid #202020;
             }
+
+            .add-to-card:hover {
+                color: #fff;
+            }
+
+            span {
+                transition: all 0.7s;
+                z-index: -1;
+            }
+
+            .add-to-card .first {
+                content: "";
+                position: absolute;
+                right: 100%;
+                top: 0;
+                width: 25%;
+                height: 100%;
+                background: #202020;
+            }
+
+            .add-to-card:hover .first {
+                top: 0;
+                right: 0;
+            }
+
+            .add-to-card .second {
+                content: "";
+                position: absolute;
+                left: 25%;
+                top: -100%;
+                height: 100%;
+                width: 25%;
+                background: #202020;
+            }
+
+            .add-to-card:hover .second {
+                top: 0;
+                left: 50%;
+            }
+
+            .add-to-card .third {
+                content: "";
+                position: absolute;
+                left: 50%;
+                height: 100%;
+                top: 100%;
+                width: 25%;
+                background: #202020;
+            }
+
+            .add-to-card:hover .third {
+                top: 0;
+                left: 25%;
+            }
+
+            .add-to-card .fourth {
+                content: "";
+                position: absolute;
+                left: 100%;
+                top: 0;
+                height: 100%;
+                width: 25%;
+                background: #202020;
+            }
+
+            .add-to-card:hover .fourth {
+                top: 0;
+                left: 0;
+            }
+
         }
     }
 }

@@ -23,7 +23,18 @@ const DetailProduct = () => {
     function handlerObject() {
 
         const data = object.map((e) => e.id)
+        const data_cor = object.map((e) => e.cor)
         const obj = product?.id
+        const cor = product?.cor
+
+        const filter: boolean = data_cor.includes(cor)
+        if (filter) {
+            return
+        } else {
+            const newState: any = [...object, product];
+            setObject(newState);
+        }
+
         if (obj !== undefined) {
             const filter: boolean = data.includes(obj)
             if (filter) {
@@ -38,9 +49,45 @@ const DetailProduct = () => {
     useEffect(() => {
         const local = localStorage.getItem('item')
         if (local) {
-            setProduct(JSON.parse(local))
+            setProduct({
+                id: JSON.parse(local).id,
+                name: JSON.parse(local).name,
+                cor: 'Preta',
+                price: JSON.parse(local).price,
+                color: [
+                    { id_color: 1, hex: JSON.parse(local)?.color[0]?.hex, name: 'Preta' },
+                    { id_color: 2, hex: JSON.parse(local)?.color[1]?.hex, name: 'Azul' },
+                    { id_color: 3, hex: JSON.parse(local)?.color[2]?.hex, name: 'Verde' },
+                    { id_color: 4, hex: JSON.parse(local)?.color[3]?.hex, name: 'Cinza' }
+                ],
+                img1: {
+                    img_1: JSON.parse(local)?.img1.img_1,
+                    img_2: JSON.parse(local)?.img1.img_2,
+                    img_3: JSON.parse(local)?.img1.img_3,
+                    img_4: JSON.parse(local)?.img1.img_4,
+                },
+                img2: {
+                    img_1: JSON.parse(local)?.img2.img_1,
+                    img_2: JSON.parse(local)?.img2.img_2,
+                    img_3: JSON.parse(local)?.img2.img_3,
+                    img_4: JSON.parse(local)?.img2.img_4,
+                },
+                img3: {
+                    img_1: JSON.parse(local)?.img3.img_1,
+                    img_2: JSON.parse(local)?.img3.img_2,
+                    img_3: JSON.parse(local)?.img3.img_3,
+                    img_4: JSON.parse(local)?.img3.img_4,
+                },
+                img4: {
+                    img_1: JSON.parse(local)?.img4.img_1,
+                    img_2: JSON.parse(local)?.img4.img_2,
+                    img_3: JSON.parse(local)?.img4.img_3,
+                    img_4: JSON.parse(local)?.img4.img_4,
+                },
+            })
         }
         alterSizeBackground()
+
     }, [])
 
     //script de anomação ao trocar de cor do produto
@@ -135,15 +182,18 @@ const DetailProduct = () => {
                                 {
                                     product?.color?.map((e) => {
                                         return (
-                                            <div key={e?.id_color} onClick={() => {
-                                                if (typeof e?.id_color !== 'undefined') {
-                                                    handlerType(e.id_color);
-                                                }
-                                                setProduct((product: any) => ({
-                                                    ...product,
-                                                    cor: e?.name
-                                                }));
-                                            }} style={{ backgroundColor: e?.hex }}></div>
+                                            <div
+                                                id='color'
+                                                key={e?.id_color}
+                                                onClick={() => {
+                                                    if (typeof e?.id_color !== 'undefined') {
+                                                        handlerType(e.id_color);
+                                                    }
+                                                    setProduct((product: any) => ({
+                                                        ...product,
+                                                        cor: e?.name
+                                                    }));
+                                                }} style={{ backgroundColor: e?.hex }}></div>
                                         )
                                     })
                                 }
@@ -194,7 +244,12 @@ const DetailProduct = () => {
                         </div>
 
                         <div className='add-to-card' onClick={() => handlerObject()}
-                        >ADICIONAR AO CARRINHO</div>
+                        >ADICIONAR AO CARRINHO
+                            <span className="first"></span>
+                            <span className="second"></span>
+                            <span className="third"></span>
+                            <span className="fourth"></span>
+                        </div>
 
                     </div>
 

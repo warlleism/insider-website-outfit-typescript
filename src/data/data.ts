@@ -131,9 +131,9 @@ export const Shirts_Male: Itens[] = [
         price: 130.00,
         color: [
             { id_color: 1, hex: '#000', name: 'Preta' },
-            { id_color: 2, hex: '#33405b', name: 'Preta' },
-            { id_color: 3, hex: '#525041', name: 'Preta' },
-            { id_color: 4, hex: '#696969', name: 'Preta' }
+            { id_color: 2, hex: '#33405b', name: 'Azul' },
+            { id_color: 3, hex: '#525041', name: 'Verde' },
+            { id_color: 4, hex: '#696969', name: 'Cinza' }
         ],
         img1: {
             default_color: 'Preta',
@@ -143,22 +143,21 @@ export const Shirts_Male: Itens[] = [
             img_4: T_shirt_4,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Azul',
             img_1: T_shirt_6,
             img_2: T_shirt_7,
             img_3: T_shirt_8,
             img_4: T_shirt_9,
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Verde',
             img_1: T_shirt_10,
             img_2: T_shirt_11,
             img_3: T_shirt_12,
             img_4: T_shirt_13,
         },
         img4: {
-            default_color: 'Preta',
-
+            default_color: 'Cinza',
             img_1: T_shirt_14,
             img_2: T_shirt_15,
             img_3: T_shirt_16,
@@ -185,21 +184,21 @@ export const Shirts_Male: Itens[] = [
             img_4: Cueca_confort_4,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Azul',
             img_1: Cueca_confort_5,
             img_2: Cueca_confort_6,
             img_3: Cueca_confort_7,
             img_4: Cueca_confort_8,
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Cinza',
             img_1: Cueca_confort_9,
             img_2: Cueca_confort_10,
             img_3: Cueca_confort_11,
             img_4: Cueca_confort_12,
         },
         img4: {
-            default_color: 'Preta',
+            default_color: 'Azul Clara',
             img_1: Cueca_confort_13,
             img_2: Cueca_confort_14,
             img_3: Cueca_confort_15,
@@ -212,9 +211,9 @@ export const Shirts_Male: Itens[] = [
         price: 130.00,
         color: [
             { id_color: 1, hex: '#5f666e', name: 'Preta' },
-            { id_color: 2, hex: '#000000', name: 'Preta' },
-            { id_color: 3, hex: '#4a695a', name: 'Preta' },
-            { id_color: 4, hex: '#33405b', name: 'Preta' }
+            { id_color: 2, hex: '#000000', name: 'Azul' },
+            { id_color: 3, hex: '#4a695a', name: 'Verde' },
+            { id_color: 4, hex: '#33405b', name: 'Roxa' }
         ],
         img1: {
             default_color: 'Preta',
@@ -224,21 +223,21 @@ export const Shirts_Male: Itens[] = [
             img_4: Cueca_performance_4,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Azul',
             img_1: Cueca_performance_5,
             img_2: Cueca_performance_6,
             img_3: Cueca_performance_7,
             img_4: Cueca_performance_8,
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Verde',
             img_1: Cueca_performance_9,
             img_2: Cueca_performance_10,
             img_3: Cueca_performance_11,
             img_4: Cueca_performance_12,
         },
         img4: {
-            default_color: 'Preta',
+            default_color: 'Roxa',
             img_1: Cueca_performance_13,
             img_2: Cueca_performance_14,
             img_3: Cueca_performance_15,
@@ -290,29 +289,29 @@ export const Shirts_Male: Itens[] = [
         price: 130.00,
         color: [
             { id_color: 1, hex: '#b59478', name: 'Preta' },
-            { id_color: 2, hex: '#ffffff', name: 'Preta' },
-            { id_color: 3, hex: '#000000', name: 'Preta' },
+            { id_color: 2, hex: '#ffffff', name: 'Branca' },
+            { id_color: 3, hex: '#000000', name: 'Bege' },
         ],
         img1: {
             default_color: 'Preta',
-            img_1: Undershirt_anti_suor_1,
-            img_2: Undershirt_anti_suor_2,
-            img_3: Undershirt_anti_suor_3,
-            img_4: Undershirt_anti_suor_4,
+            img_1: Undershirt_anti_suor_9,
+            img_2: Undershirt_anti_suor_10,
+            img_3: Undershirt_anti_suor_11,
+            img_4: Undershirt_anti_suor_12,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Branca',
             img_1: Undershirt_anti_suor_5,
             img_2: Undershirt_anti_suor_6,
             img_3: Undershirt_anti_suor_7,
             img_4: Undershirt_anti_suor_8,
         },
         img3: {
-            default_color: 'Preta',
-            img_1: Undershirt_anti_suor_9,
-            img_2: Undershirt_anti_suor_10,
-            img_3: Undershirt_anti_suor_11,
-            img_4: Undershirt_anti_suor_12,
+            default_color: 'Bege',
+            img_1: Undershirt_anti_suor_1,
+            img_2: Undershirt_anti_suor_2,
+            img_3: Undershirt_anti_suor_3,
+            img_4: Undershirt_anti_suor_4,
         },
 
     },
@@ -321,34 +320,34 @@ export const Shirts_Male: Itens[] = [
         name: 'Everyday Shorts',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#525041', name: 'Preta' },
-            { id_color: 3, hex: '#65605f', name: 'Preta' },
-            { id_color: 4, hex: '#654555', name: 'Preta' }
+            { id_color: 1, hex: '#000000', name: 'Verde Escuro' },
+            { id_color: 2, hex: '#525041', name: 'Verde' },
+            { id_color: 3, hex: '#65605f', name: 'Bege' },
+            { id_color: 4, hex: '#654555', name: 'Rosa' }
         ],
         img1: {
-            default_color: 'Preta',
+            default_color: 'Verde Escuro',
             img_1: Everyday_shorts_1,
             img_2: Everyday_shorts_2,
             img_3: Everyday_shorts_3,
             img_4: Everyday_shorts_4,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Verde',
             img_1: Everyday_shorts_5,
             img_2: Everyday_shorts_6,
             img_3: Everyday_shorts_7,
             img_4: Everyday_shorts_8,
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Bege',
             img_1: Everyday_shorts_9,
             img_2: Everyday_shorts_10,
             img_3: Everyday_shorts_11,
             img_4: Everyday_shorts_12,
         },
         img4: {
-            default_color: 'Preta',
+            default_color: 'Rosa',
             img_1: Everyday_shorts_13,
             img_2: Everyday_shorts_14,
             img_3: Everyday_shorts_15,
@@ -360,9 +359,9 @@ export const Shirts_Male: Itens[] = [
         price: 130.00,
         color: [
             { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#7f7664', name: 'Preta' },
-            { id_color: 3, hex: '#f0f0ee', name: 'Preta' },
-            { id_color: 4, hex: '#824700', name: 'Preta' }
+            { id_color: 2, hex: '#7f7664', name: 'Verde' },
+            { id_color: 3, hex: '#f0f0ee', name: 'Branca' },
+            { id_color: 4, hex: '#824700', name: 'Bege' }
         ],
         img1: {
             default_color: 'Preta',
@@ -372,22 +371,21 @@ export const Shirts_Male: Itens[] = [
             img_4: Daily_t_shirt_4
         },
         img2: {
-            default_color: 'Preta',
-
+            default_color: 'Verde',
             img_1: Daily_t_shirt_5,
             img_2: Daily_t_shirt_6,
             img_3: Daily_t_shirt_7,
             img_4: Daily_t_shirt_8
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Branca',
             img_1: Daily_t_shirt_9,
             img_2: Daily_t_shirt_10,
             img_3: Daily_t_shirt_11,
             img_4: Daily_t_shirt_12
         },
         img4: {
-            default_color: 'Preta',
+            default_color: 'Bege',
             img_1: Daily_t_shirt_13,
             img_2: Daily_t_shirt_14,
             img_3: Daily_t_shirt_15,
@@ -400,8 +398,8 @@ export const Shirts_Male: Itens[] = [
         color: [
             { id_color: 1, hex: '#000000', name: 'Preta' },
             { id_color: 2, hex: '#fff', name: 'Branca' },
-            { id_color: 3, hex: '#9c99a0', name: 'Light Gray' },
-            { id_color: 4, hex: '#b8ad81', name: 'Gray Mint' }
+            { id_color: 3, hex: '#9c99a0', name: 'Cinza Claro' },
+            { id_color: 4, hex: '#b8ad81', name: 'Cinza Escuro' }
         ],
         img1: {
             default_color: 'Preta',
@@ -411,21 +409,21 @@ export const Shirts_Male: Itens[] = [
             img_4: Performance_t_shirt_2_4,
         },
         img2: {
-            default_color: 'Preta',
+            default_color: 'Branca',
             img_1: Performance_t_shirt_2_5,
             img_2: Performance_t_shirt_2_6,
             img_3: Performance_t_shirt_2_7,
             img_4: Performance_t_shirt_2_8,
         },
         img3: {
-            default_color: 'Preta',
+            default_color: 'Cinza Claro',
             img_1: Performance_t_shirt_2_9,
             img_2: Performance_t_shirt_2_10,
             img_3: Performance_t_shirt_2_11,
             img_4: Performance_t_shirt_2_12,
         },
         img4: {
-            default_color: 'Preta',
+            default_color: 'Cinza Escuro',
             img_1: Performance_t_shirt_2_13,
             img_2: Performance_t_shirt_2_14,
             img_3: Performance_t_shirt_2_15,

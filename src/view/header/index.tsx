@@ -7,30 +7,11 @@ import { useContext, useEffect } from 'react';
 import './style.scss'
 import { useNavigate } from 'react-router-dom';
 
-interface ObjAtual {
-    id: number;
-}
-
-interface ObjFiltrado {
-    [id: number]: ObjAtual;
-}
 
 const Header = () => {
 
     const { object, setObject } = useContext(Context)
     const navigate = useNavigate()
-
-
-    useEffect(() => {
-        const filteredArray: any = Object.values(object.reduce<ObjFiltrado>((objFiltrado, objAtual) => {
-            if (!objFiltrado[objAtual.id]) {
-                objFiltrado[objAtual.id] = objAtual;
-            }
-            return objFiltrado;
-        }, {}));
-
-        setObject(filteredArray);
-    }, []);
 
     //funcao responsavel por mostrar o cart
     function showCartContent(param: boolean) {
@@ -47,11 +28,10 @@ const Header = () => {
     }
 
     //funcao responsavel por deletar um item do carrinho
-    function deleteItemCart(id: number) {
-        const filter: any = object.filter((data: any) => data.id !== id)
+    function deleteItemCart(id: number, cor: string) {
+        const filter: any = object.filter((data: any) => data.id !== id || data.cor !== cor)
         setObject(filter)
     }
-
     //permanecendo dado no localstorage e rotaciona pra tela de detalhar
     function setLocalStorage(object: any) {
         localStorage.setItem('item', JSON.stringify(object))
@@ -114,7 +94,7 @@ const Header = () => {
                                         <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
                                     </div>
                                     <img src={data?.img1.img_1} alt="" />
-                                    <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id)}>
+                                    <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id, data.cor)}>
                                         close
                                     </span>
                                 </div>

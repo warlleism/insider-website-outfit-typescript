@@ -8,6 +8,7 @@ interface Color {
 export interface Itens {
     id: number;
     name: string;
+    cor?: string;
     price: number;
     id_color?: number;
     color?: Color[];
