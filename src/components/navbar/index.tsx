@@ -102,12 +102,16 @@ const Navbar = () => {
                         ?
                         <div className='container-cart-detail' id='cart-content' onMouseLeave={() => showCartContent(false)}>
                             {object?.map((data: any) => {
-                                console.log(data.cor)
                                 return (
-                                    <div className='container-cart-content' key={data?.id}>
-                                        <div className='container-info-cart' onClick={() => setLocalStorage(data)}>
-                                            <div>{data?.name}</div>
-                                            <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
+                                    <div className='container-cart-content'>
+                                        <div className='container-info-cart'>
+                                            <div onClick={() => setLocalStorage(data)}>{data?.name}</div>
+                                            <div>{data?.cor}</div>
+                                            <div className='container-plus-itens'>
+                                                <div>-</div>
+                                                <span>1</span>
+                                                <div>+</div>
+                                            </div>
                                         </div>
                                         <img src={data?.img1.img_1} alt="" />
                                         <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id, data.cor)}>
@@ -117,7 +121,6 @@ const Navbar = () => {
                                 )
                             })}
                         </div>
-
                         :
                         false
                 }

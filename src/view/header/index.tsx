@@ -3,7 +3,7 @@ import femaleImage2 from '../../images/navbar/female-casual2.png';
 import maleImage1 from '../../images/navbar/male-casual1.png';
 import maleImage2 from '../../images/navbar/male-casual2.png';
 import { Context } from './../../context/provider';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import './style.scss'
 import { useNavigate } from 'react-router-dom';
 
@@ -82,6 +82,7 @@ const Header = () => {
             <div className='white-card'></div>
             <div className='black-card'></div>
             <div className='container-logo'>INSIDER.</div>
+
             {
                 object.length !== 0
                     ?
@@ -89,9 +90,14 @@ const Header = () => {
                         {object?.map((data: any) => {
                             return (
                                 <div className='container-cart-content'>
-                                    <div className='container-info-cart' onClick={() => setLocalStorage(data)}>
-                                        <div>{data?.name}</div>
+                                    <div className='container-info-cart'>
+                                        <div onClick={() => setLocalStorage(data)}>{data?.name}</div>
                                         <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
+                                        <div className='container-plus-itens'>
+                                            <div>-</div>
+                                            <span>1</span>
+                                            <div>+</div>
+                                        </div>
                                     </div>
                                     <img src={data?.img1.img_1} alt="" />
                                     <span className="material-symbols-outlined" style={{ cursor: 'pointer' }} onClick={() => deleteItemCart(data.id, data.cor)}>
@@ -101,10 +107,10 @@ const Header = () => {
                             )
                         })}
                     </div>
-
                     :
                     false
             }
+            
             <div id='content-navbar' className='container-content-navbar man' onMouseLeave={() => handdlerContent('man', false)}>
                 <ul>
                     <li style={{ fontWeight: 900 }}>TOPS</li>

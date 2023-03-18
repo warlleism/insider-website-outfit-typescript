@@ -55,10 +55,10 @@ const DetailProduct = () => {
                 cor: 'Preta',
                 price: JSON.parse(local).price,
                 color: [
-                    { id_color: 1, hex: JSON.parse(local)?.color[0]?.hex, name: 'Preta' },
-                    { id_color: 2, hex: JSON.parse(local)?.color[1]?.hex, name: 'Azul' },
-                    { id_color: 3, hex: JSON.parse(local)?.color[2]?.hex, name: 'Verde' },
-                    { id_color: 4, hex: JSON.parse(local)?.color[3]?.hex, name: 'Cinza' }
+                    { id_color: 1, hex: JSON.parse(local)?.color[0]?.hex, name: JSON.parse(local)?.color[0]?.name },
+                    { id_color: 2, hex: JSON.parse(local)?.color[1]?.hex, name: JSON.parse(local)?.color[1]?.name },
+                    { id_color: 3, hex: JSON.parse(local)?.color[2]?.hex, name: JSON.parse(local)?.color[2]?.name },
+                    { id_color: 4, hex: JSON.parse(local)?.color[3]?.hex, name: JSON.parse(local)?.color[3]?.name }
                 ],
                 img1: {
                     img_1: JSON.parse(local)?.img1.img_1,
@@ -188,6 +188,7 @@ const DetailProduct = () => {
                                                 onClick={() => {
                                                     if (typeof e?.id_color !== 'undefined') {
                                                         handlerType(e.id_color);
+                                                        console.log(e.name)
                                                     }
                                                     setProduct((product: any) => ({
                                                         ...product,
@@ -235,7 +236,7 @@ const DetailProduct = () => {
                                     -
                                 </div>
                                 <div>
-                                    2
+                                    1
                                 </div>
                                 <div style={{ cursor: 'pointer' }}>
                                     +
