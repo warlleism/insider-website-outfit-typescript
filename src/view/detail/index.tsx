@@ -22,13 +22,18 @@ const DetailProduct = () => {
     //funcao responsavel por adicionar produto ao carrinho
     function handlerObject() {
 
-        const data = object.map((e) => e.id)
+        const data_id = object.map((e) => e.id)
         const data_cor = object.map((e) => e.cor)
+
         const obj = product?.id
         const cor = product?.cor
 
         const filter: boolean = data_cor.includes(cor)
-        if (filter) {
+        const filterId: boolean = obj !== undefined && data_id.includes(obj)
+
+        console.log(filterId)
+
+        if (filter == true && filterId == true) {
             return
         } else {
             const newState: any = [...object, product];
@@ -36,7 +41,7 @@ const DetailProduct = () => {
         }
 
         if (obj !== undefined) {
-            const filter: boolean = data.includes(obj)
+            const filter: boolean = data_id.includes(obj)
             if (filter) {
                 return
             } else {

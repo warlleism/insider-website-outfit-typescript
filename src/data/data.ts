@@ -197,9 +197,9 @@ export const Shirts_Male: Itens[] = [
         price: 130.00,
         color: [
             { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#33405b', name: 'Preta' },
-            { id_color: 3, hex: '#5f666e', name: 'Preta' },
-            { id_color: 4, hex: '#a0b2d0', name: 'Preta' }
+            { id_color: 2, hex: '#33405b', name: 'Azul' },
+            { id_color: 3, hex: '#5f666e', name: 'Cinza' },
+            { id_color: 4, hex: '#a0b2d0', name: 'Azul clara' }
         ],
         img1: {
             img_1: Cueca_confort_1,
@@ -446,7 +446,7 @@ export const Shirts_Female: Itens[] = [
             { id_color: 1, hex: '#ffff', name: 'Branca' },
             { id_color: 2, hex: '#c8741f', name: 'Laranja' },
             { id_color: 3, hex: '#015dc7', name: 'Azul claro' },
-            { id_color: 4, hex: '#33405b', name: 'Azul escuro' }
+            { id_color: 4, hex: '#33405b', name: 'Oceano' }
         ],
         img1: {
             img_1: Tshirt_female_1,

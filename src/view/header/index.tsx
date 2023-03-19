@@ -76,6 +76,13 @@ const Header = () => {
         }
     }
 
+    function handlerValor(id: number) {
+
+        const filter = object.filter((item) => item.id !== id)
+        console.log(filter)
+
+    }
+
     return (
         <div className='container-header' onMouseLeave={() => handdlerContent('man', false)}>
             <div className='container-title'>INSI<strong style={{ color: "#121212" }}>DER.</strong></div>
@@ -94,9 +101,9 @@ const Header = () => {
                                         <div onClick={() => setLocalStorage(data)}>{data?.name}</div>
                                         <div>{data?.cor ? data?.cor : data?.img1.default_color}</div>
                                         <div className='container-plus-itens'>
-                                            <div>-</div>
+                                            <div onClick={() => handlerValor(data?.id)}>-</div>
                                             <span>1</span>
-                                            <div>+</div>
+                                            <div onClick={() => handlerValor(data?.id)}>+</div>
                                         </div>
                                     </div>
                                     <img src={data?.img1.img_1} alt="" />
@@ -110,7 +117,7 @@ const Header = () => {
                     :
                     false
             }
-            
+
             <div id='content-navbar' className='container-content-navbar man' onMouseLeave={() => handdlerContent('man', false)}>
                 <ul>
                     <li style={{ fontWeight: 900 }}>TOPS</li>

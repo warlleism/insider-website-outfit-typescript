@@ -35,7 +35,6 @@ const Navbar = () => {
             if (param) {
                 cart.style.opacity = '1';
                 cart.style.pointerEvents = 'all';
-
             } else {
                 cart.style.opacity = '0';
                 cart.style.pointerEvents = 'none';
