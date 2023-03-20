@@ -64,10 +64,10 @@ import Undershirt_anti_suor_10 from "../images/male/undershirt-anti-suor/img10.p
 import Undershirt_anti_suor_11 from "../images/male/undershirt-anti-suor/img11.png"
 import Undershirt_anti_suor_12 from "../images/male/undershirt-anti-suor/img12.png"
 
-import Tech_t_shirt_gola_1 from "../images/male/tech-t-shirt-gola-v/img1.png"
-import Tech_t_shirt_gola_2 from "../images/male/tech-t-shirt-gola-v/img2.png"
-import Tech_t_shirt_gola_3 from "../images/male/tech-t-shirt-gola-v/img3.png"
-import Tech_t_shirt_gola_4 from "../images/male/tech-t-shirt-gola-v/img4.png"
+import Tech_t_shirt_gola_v_1 from "../images/male/tech-t-shirt-gola-v/img1.png"
+import Tech_t_shirt_gola_v_2 from "../images/male/tech-t-shirt-gola-v/img2.png"
+import Tech_t_shirt_gola_v_3 from "../images/male/tech-t-shirt-gola-v/img3.png"
+import Tech_t_shirt_gola_v_4 from "../images/male/tech-t-shirt-gola-v/img4.png"
 
 import Everyday_shorts_1 from "../images/male/everyday-shorts/img1.png"
 import Everyday_shorts_2 from "../images/male/everyday-shorts/img2.png"
@@ -151,6 +151,24 @@ import High_neck_13 from "../images/female/high-neck/img13.png"
 import High_neck_14 from "../images/female/high-neck/img14.png"
 import High_neck_15 from "../images/female/high-neck/img15.png"
 import High_neck_16 from "../images/female/high-neck/img16.png"
+
+
+import Tech_t_shirt_gola_v_female_1 from "../images/female/tech-t-shirt-gola-v/img1.png"
+import Tech_t_shirt_gola_v_female_2 from "../images/female/tech-t-shirt-gola-v/img2.png"
+import Tech_t_shirt_gola_v_female_3 from "../images/female/tech-t-shirt-gola-v/img3.png"
+import Tech_t_shirt_gola_v_female_4 from "../images/female/tech-t-shirt-gola-v/img4.png"
+import Tech_t_shirt_gola_v_female_5 from "../images/female/tech-t-shirt-gola-v/img5.png"
+import Tech_t_shirt_gola_v_female_6 from "../images/female/tech-t-shirt-gola-v/img6.png"
+import Tech_t_shirt_gola_v_female_7 from "../images/female/tech-t-shirt-gola-v/img7.png"
+import Tech_t_shirt_gola_v_female_8 from "../images/female/tech-t-shirt-gola-v/img8.png"
+import Tech_t_shirt_gola_v_female_9 from "../images/female/tech-t-shirt-gola-v/img9.png"
+import Tech_t_shirt_gola_v_female_10 from "../images/female/tech-t-shirt-gola-v/img10.png"
+import Tech_t_shirt_gola_v_female_11 from "../images/female/tech-t-shirt-gola-v/img11.png"
+import Tech_t_shirt_gola_v_female_12 from "../images/female/tech-t-shirt-gola-v/img12.png"
+import Tech_t_shirt_gola_v_female_13 from "../images/female/tech-t-shirt-gola-v/img13.png"
+import Tech_t_shirt_gola_v_female_14 from "../images/female/tech-t-shirt-gola-v/img14.png"
+import Tech_t_shirt_gola_v_female_15 from "../images/female/tech-t-shirt-gola-v/img15.png"
+import Tech_t_shirt_gola_v_female_16 from "../images/female/tech-t-shirt-gola-v/img16.png"
 
 
 export const Shirts_Male: Itens[] = [
@@ -266,16 +284,16 @@ export const Shirts_Male: Itens[] = [
         name: 'Tech T-Shirt Gola V',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#696969', name: 'Preta' },
-            { id_color: 2, hex: '#33405b', name: 'Preta' },
-            { id_color: 3, hex: '#f0f0ee', name: 'Preta' },
-            { id_color: 4, hex: '#525041', name: 'Preta' }
+            { id_color: 1, hex: '#696969', name: 'Cinza' },
+            { id_color: 2, hex: '#33405b', name: 'Azul' },
+            { id_color: 3, hex: '#f0f0ee', name: 'Branca' },
+            { id_color: 4, hex: '#525041', name: 'Verde' }
         ],
         img1: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Tech_t_shirt_gola_v_1,
+            img_2: Tech_t_shirt_gola_v_2,
+            img_3: Tech_t_shirt_gola_v_3,
+            img_4: Tech_t_shirt_gola_v_4,
         },
         img2: {
             img_1: Undershirt_anti_suor_1,
@@ -284,16 +302,16 @@ export const Shirts_Male: Itens[] = [
             img_4: Undershirt_anti_suor_2,
         },
         img3: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Tech_t_shirt_gola_v_1,
+            img_2: Tech_t_shirt_gola_v_2,
+            img_3: Tech_t_shirt_gola_v_3,
+            img_4: Tech_t_shirt_gola_v_4,
         },
         img4: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Tech_t_shirt_gola_v_1,
+            img_2: Tech_t_shirt_gola_v_2,
+            img_3: Tech_t_shirt_gola_v_3,
+            img_4: Tech_t_shirt_gola_v_4,
         }
     },
     {
@@ -512,212 +530,218 @@ export const Shirts_Female: Itens[] = [
     },
     {
         id: 3,
-        name: 'Cueca Performance',
+        name: 'Tech T-Shirt Gola V Feminina',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#5f666e', name: 'Preta' },
-            { id_color: 2, hex: '#000000', name: 'Azul' },
-            { id_color: 3, hex: '#4a695a', name: 'Verde' },
-            { id_color: 4, hex: '#33405b', name: 'Roxa' }
+            { id_color: 1, hex: '#000000', name: 'Preta' },
+            { id_color: 2, hex: '#ffff', name: 'Branca' },
+            { id_color: 3, hex: '#52513f', name: 'Verde' },
+            { id_color: 4, hex: '#696969', name: 'Cinza' }
         ],
         img1: {
-            img_1: Cueca_performance_1,
-            img_2: Cueca_performance_2,
-            img_3: Cueca_performance_3,
-            img_4: Cueca_performance_4,
+            img_1: Tech_t_shirt_gola_v_female_1,
+            img_2: Tech_t_shirt_gola_v_female_2,
+            img_3: Tech_t_shirt_gola_v_female_3,
+            img_4: Tech_t_shirt_gola_v_female_4,
         },
         img2: {
-            img_1: Cueca_performance_5,
-            img_2: Cueca_performance_6,
-            img_3: Cueca_performance_7,
-            img_4: Cueca_performance_8,
+            img_1: Tech_t_shirt_gola_v_female_5,
+            img_2: Tech_t_shirt_gola_v_female_6,
+            img_3: Tech_t_shirt_gola_v_female_7,
+            img_4: Tech_t_shirt_gola_v_female_8,
         },
         img3: {
-            img_1: Cueca_performance_9,
-            img_2: Cueca_performance_10,
-            img_3: Cueca_performance_11,
-            img_4: Cueca_performance_12,
+            img_1: Tech_t_shirt_gola_v_female_9,
+            img_2: Tech_t_shirt_gola_v_female_10,
+            img_3: Tech_t_shirt_gola_v_female_11,
+            img_4: Tech_t_shirt_gola_v_female_12,
         },
         img4: {
-            img_1: Cueca_performance_13,
-            img_2: Cueca_performance_14,
-            img_3: Cueca_performance_15,
-            img_4: Cueca_performance_16,
+            img_1: Tech_t_shirt_gola_v_female_13,
+            img_2: Tech_t_shirt_gola_v_female_14,
+            img_3: Tech_t_shirt_gola_v_female_15,
+            img_4: Tech_t_shirt_gola_v_female_16,
         }
     },
     {
         id: 4,
-        name: 'Tech T-Shirt Gola V',
+        name: 'Tech T-Shirt',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#696969', name: 'Preta' },
-            { id_color: 2, hex: '#33405b', name: 'Preta' },
-            { id_color: 3, hex: '#f0f0ee', name: 'Preta' },
-            { id_color: 4, hex: '#525041', name: 'Preta' }
+            { id_color: 1, hex: '#ffff', name: 'Branca' },
+            { id_color: 2, hex: '#c8741f', name: 'Laranja' },
+            { id_color: 3, hex: '#015dc7', name: 'Azul claro' },
+            { id_color: 4, hex: '#33405b', name: 'Oceano' }
         ],
         img1: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Tshirt_female_1,
+            img_2: Tshirt_female_2,
+            img_3: Tshirt_female_3,
+            img_4: Tshirt_female_4,
         },
         img2: {
-            img_1: Undershirt_anti_suor_1,
-            img_2: Undershirt_anti_suor_1,
-            img_3: Undershirt_anti_suor_2,
-            img_4: Undershirt_anti_suor_2,
+            img_1: Tshirt_female_5,
+            img_2: Tshirt_female_6,
+            img_3: Tshirt_female_7,
+            img_4: Tshirt_female_8,
         },
         img3: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
+            img_1: Tshirt_female_9,
+            img_2: Tshirt_female_10,
+            img_3: Tshirt_female_11,
+            img_4: Tshirt_female_12,
         },
         img4: {
-            img_1: Tech_t_shirt_gola_1,
-            img_2: Tech_t_shirt_gola_2,
-            img_3: Tech_t_shirt_gola_3,
-            img_4: Tech_t_shirt_gola_4,
-        }
-    },
-    {
-        id: 5,
-        name: 'Undershirt Anti Suor',
-        price: 130.00,
-        color: [
-            { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#ffffff', name: 'Branca' },
-            { id_color: 3, hex: '#b59478', name: 'Bege' },
-            { id_color: 4, hex: '#400501', name: 'Vinho' },
-        ],
-        img1: {
-            img_1: Undershirt_anti_suor_9,
-            img_2: Undershirt_anti_suor_10,
-            img_3: Undershirt_anti_suor_11,
-            img_4: Undershirt_anti_suor_12,
+            img_1: Tshirt_female_13,
+            img_2: Tshirt_female_14,
+            img_3: Tshirt_female_15,
+            img_4: Tshirt_female_16,
         },
-        img2: {
-            img_1: Undershirt_anti_suor_5,
-            img_2: Undershirt_anti_suor_6,
-            img_3: Undershirt_anti_suor_7,
-            img_4: Undershirt_anti_suor_8,
-        },
-        img3: {
-            img_1: Undershirt_anti_suor_1,
-            img_2: Undershirt_anti_suor_2,
-            img_3: Undershirt_anti_suor_3,
-            img_4: Undershirt_anti_suor_4,
-        },
-        img4: {
-            img_1: Undershirt_anti_suor_1,
-            img_2: Undershirt_anti_suor_2,
-            img_3: Undershirt_anti_suor_3,
-            img_4: Undershirt_anti_suor_4,
-        },
+
 
     },
     {
-        id: 6,
-        name: 'Everyday Shorts',
-        price: 130.00,
+        id: 5,
+        name: 'High Neck',
+        price: 135.00,
         color: [
-            { id_color: 1, hex: '#000000', name: 'Verde Escuro' },
-            { id_color: 2, hex: '#525041', name: 'Verde' },
-            { id_color: 3, hex: '#65605f', name: 'Bege' },
-            { id_color: 4, hex: '#654555', name: 'Rosa' }
+            { id_color: 1, hex: '#aec9d2', name: 'Branco azulado' },
+            { id_color: 2, hex: '#e2b664', name: 'Amarelo' },
+            { id_color: 3, hex: '#52513f', name: 'Verde' },
+            { id_color: 4, hex: '#ffff', name: 'Branca' }
         ],
         img1: {
-            img_1: Everyday_shorts_1,
-            img_2: Everyday_shorts_2,
-            img_3: Everyday_shorts_3,
-            img_4: Everyday_shorts_4,
+            img_1: High_neck_1,
+            img_2: High_neck_2,
+            img_3: High_neck_3,
+            img_4: High_neck_4,
         },
         img2: {
-            img_1: Everyday_shorts_5,
-            img_2: Everyday_shorts_6,
-            img_3: Everyday_shorts_7,
-            img_4: Everyday_shorts_8,
+            img_1: High_neck_5,
+            img_2: High_neck_6,
+            img_3: High_neck_7,
+            img_4: High_neck_8,
         },
         img3: {
-            img_1: Everyday_shorts_9,
-            img_2: Everyday_shorts_10,
-            img_3: Everyday_shorts_11,
-            img_4: Everyday_shorts_12,
+            img_1: High_neck_9,
+            img_2: High_neck_10,
+            img_3: High_neck_11,
+            img_4: High_neck_12,
         },
         img4: {
-            img_1: Everyday_shorts_13,
-            img_2: Everyday_shorts_14,
-            img_3: Everyday_shorts_15,
+            img_1: High_neck_13,
+            img_2: High_neck_14,
+            img_3: High_neck_15,
+            img_4: High_neck_16,
         },
+    },
+    {
+        id: 6,
+        name: 'Tech T-Shirt Gola V Feminina',
+        price: 130.00,
+        color: [
+            { id_color: 1, hex: '#000000', name: 'Preta' },
+            { id_color: 2, hex: '#ffff', name: 'Branca' },
+            { id_color: 3, hex: '#52513f', name: 'Verde' },
+            { id_color: 4, hex: '#696969', name: 'Cinza' }
+        ],
+        img1: {
+            img_1: Tech_t_shirt_gola_v_female_1,
+            img_2: Tech_t_shirt_gola_v_female_2,
+            img_3: Tech_t_shirt_gola_v_female_3,
+            img_4: Tech_t_shirt_gola_v_female_4,
+        },
+        img2: {
+            img_1: Tech_t_shirt_gola_v_female_5,
+            img_2: Tech_t_shirt_gola_v_female_6,
+            img_3: Tech_t_shirt_gola_v_female_7,
+            img_4: Tech_t_shirt_gola_v_female_8,
+        },
+        img3: {
+            img_1: Tech_t_shirt_gola_v_female_9,
+            img_2: Tech_t_shirt_gola_v_female_10,
+            img_3: Tech_t_shirt_gola_v_female_11,
+            img_4: Tech_t_shirt_gola_v_female_12,
+        },
+        img4: {
+            img_1: Tech_t_shirt_gola_v_female_13,
+            img_2: Tech_t_shirt_gola_v_female_14,
+            img_3: Tech_t_shirt_gola_v_female_15,
+            img_4: Tech_t_shirt_gola_v_female_16,
+        }
     },
     {
         id: 7,
-        name: 'Daily T-Shirt',
+        name: 'Tech T-Shirt',
         price: 130.00,
         color: [
-            { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#7f7664', name: 'Verde' },
-            { id_color: 3, hex: '#f0f0ee', name: 'Branca' },
-            { id_color: 4, hex: '#824700', name: 'Bege' }
+            { id_color: 1, hex: '#ffff', name: 'Branca' },
+            { id_color: 2, hex: '#c8741f', name: 'Laranja' },
+            { id_color: 3, hex: '#015dc7', name: 'Azul claro' },
+            { id_color: 4, hex: '#33405b', name: 'Oceano' }
         ],
         img1: {
-            img_1: Daily_t_shirt_1,
-            img_2: Daily_t_shirt_2,
-            img_3: Daily_t_shirt_3,
-            img_4: Daily_t_shirt_4
+            img_1: Tshirt_female_1,
+            img_2: Tshirt_female_2,
+            img_3: Tshirt_female_3,
+            img_4: Tshirt_female_4,
         },
         img2: {
-            img_1: Daily_t_shirt_5,
-            img_2: Daily_t_shirt_6,
-            img_3: Daily_t_shirt_7,
-            img_4: Daily_t_shirt_8
+            img_1: Tshirt_female_5,
+            img_2: Tshirt_female_6,
+            img_3: Tshirt_female_7,
+            img_4: Tshirt_female_8,
         },
         img3: {
-            img_1: Daily_t_shirt_9,
-            img_2: Daily_t_shirt_10,
-            img_3: Daily_t_shirt_11,
-            img_4: Daily_t_shirt_12
+            img_1: Tshirt_female_9,
+            img_2: Tshirt_female_10,
+            img_3: Tshirt_female_11,
+            img_4: Tshirt_female_12,
         },
         img4: {
-            img_1: Daily_t_shirt_13,
-            img_2: Daily_t_shirt_14,
-            img_3: Daily_t_shirt_15,
+            img_1: Tshirt_female_13,
+            img_2: Tshirt_female_14,
+            img_3: Tshirt_female_15,
+            img_4: Tshirt_female_16,
         },
+
+
     },
     {
         id: 8,
-        name: 'Performance T-Shirt 2.0',
-        price: 130.00,
+        name: 'High Neck',
+        price: 135.00,
         color: [
-            { id_color: 1, hex: '#000000', name: 'Preta' },
-            { id_color: 2, hex: '#fff', name: 'Branca' },
-            { id_color: 3, hex: '#9c99a0', name: 'Cinza Claro' },
-            { id_color: 4, hex: '#b8ad81', name: 'Cinza Escuro' }
+            { id_color: 1, hex: '#aec9d2', name: 'Branco azulado' },
+            { id_color: 2, hex: '#e2b664', name: 'Amarelo' },
+            { id_color: 3, hex: '#52513f', name: 'Verde' },
+            { id_color: 4, hex: '#ffff', name: 'Branca' }
         ],
         img1: {
-            img_1: Performance_t_shirt_2_1,
-            img_2: Performance_t_shirt_2_2,
-            img_3: Performance_t_shirt_2_3,
-            img_4: Performance_t_shirt_2_4,
+            img_1: High_neck_1,
+            img_2: High_neck_2,
+            img_3: High_neck_3,
+            img_4: High_neck_4,
         },
         img2: {
-            img_1: Performance_t_shirt_2_5,
-            img_2: Performance_t_shirt_2_6,
-            img_3: Performance_t_shirt_2_7,
-            img_4: Performance_t_shirt_2_8,
+            img_1: High_neck_5,
+            img_2: High_neck_6,
+            img_3: High_neck_7,
+            img_4: High_neck_8,
         },
         img3: {
-            img_1: Performance_t_shirt_2_9,
-            img_2: Performance_t_shirt_2_10,
-            img_3: Performance_t_shirt_2_11,
-            img_4: Performance_t_shirt_2_12,
+            img_1: High_neck_9,
+            img_2: High_neck_10,
+            img_3: High_neck_11,
+            img_4: High_neck_12,
         },
         img4: {
-            img_1: Performance_t_shirt_2_13,
-            img_2: Performance_t_shirt_2_14,
-            img_3: Performance_t_shirt_2_15,
-            img_4: Performance_t_shirt_2_16,
-        }
+            img_1: High_neck_13,
+            img_2: High_neck_14,
+            img_3: High_neck_15,
+            img_4: High_neck_16,
+        },
     }
+
 ]
 

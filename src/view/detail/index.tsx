@@ -18,6 +18,7 @@ const DetailProduct = () => {
     const [type, setType] = useState<Imagens>()
     const [product, setProduct] = useState<Itens>()
     const { object, setObject } = useContext(Context)
+    const [qtd, setQtd] = useState<number>(1)
 
     //funcao responsavel por adicionar produto ao carrinho
     function handlerObject() {
@@ -237,13 +238,19 @@ const DetailProduct = () => {
                             <span>Tamanho :</span>
 
                             <div className='container-values'>
-                                <div style={{ cursor: 'pointer' }}>
+                                <div style={{ cursor: 'pointer' }} onClick={() => {
+                                    if (qtd == 0) {
+                                        return
+                                    } else {
+                                        setQtd(qtd - 1)
+                                    }
+                                }}>
                                     -
                                 </div>
                                 <div>
-                                    1
+                                    {qtd}
                                 </div>
-                                <div style={{ cursor: 'pointer' }}>
+                                <div style={{ cursor: 'pointer' }} onClick={() => setQtd(qtd + 1)}>
                                     +
                                 </div>
                             </div>
